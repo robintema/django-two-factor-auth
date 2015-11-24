@@ -107,7 +107,7 @@ class TOTPDeviceForm(forms.Form):
         """
         The secret key as a binary string.
         """
-        return unhexlify(self.key.encode())
+        return unhexlify(self.key)
 
     def clean_token(self):
         token = self.cleaned_data.get('token')

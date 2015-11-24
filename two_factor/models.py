@@ -84,7 +84,7 @@ class PhoneDevice(Device):
 
     @property
     def bin_key(self):
-        return unhexlify(self.key.encode())
+        return unhexlify(self.key)
 
     def verify_token(self, token):
         # local import to avoid circular import
